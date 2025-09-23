@@ -1,14 +1,17 @@
-// Show surprise on button click
+// Elements
 const revealBtn = document.getElementById('revealBtn');
 const surpriseSection = document.getElementById('surprise');
+const birthdaySong = document.getElementById('birthdaySong');
 
+// Show surprise on button click
 revealBtn.addEventListener('click', () => {
     surpriseSection.style.display = 'block';
     launchConfetti();
     startSlideshow();
+    birthdaySong.play(); // Play the song
 });
 
-// Confetti Animation
+// ------------------ Confetti Animation ------------------
 function launchConfetti() {
     const canvas = document.getElementById('confettiCanvas');
     canvas.width = window.innerWidth;
@@ -55,10 +58,14 @@ function launchConfetti() {
     setInterval(draw, 20);
 }
 
-// Slideshow
+// ------------------ Slideshow ------------------
 function startSlideshow() {
     const slides = document.querySelectorAll('.slideshow img');
     let index = 0;
+
+    // Ensure first image is active
+    slides.forEach(s => s.classList.remove('active'));
+    if (slides.length > 0) slides[0].classList.add('active');
 
     setInterval(() => {
         slides[index].classList.remove('active');
@@ -66,3 +73,4 @@ function startSlideshow() {
         slides[index].classList.add('active');
     }, 3000); // change every 3 seconds
 }
+
