@@ -5,6 +5,7 @@ const surpriseSection = document.getElementById('surprise');
 revealBtn.addEventListener('click', () => {
     surpriseSection.style.display = 'block';
     launchConfetti();
+    startSlideshow();
 });
 
 // Confetti Animation
@@ -52,4 +53,16 @@ function launchConfetti() {
     }
 
     setInterval(draw, 20);
+}
+
+// Slideshow
+function startSlideshow() {
+    const slides = document.querySelectorAll('.slideshow img');
+    let index = 0;
+
+    setInterval(() => {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }, 3000); // change every 3 seconds
 }
