@@ -4,6 +4,7 @@ body {
   background: linear-gradient(to right, #ffdde1, #ee9ca7);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 header {
@@ -41,10 +42,35 @@ button:hover {
   margin-top: 30px;
 }
 
+/* Slideshow */
+.slideshow {
+  position: relative;
+  width: 320px;
+  margin: 20px auto;
+}
+
 .slideshow img {
   width: 300px;
   height: auto;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
+
+.slideshow img.active {
+  opacity: 1;
+}
+
+/* Confetti canvas fills screen */
+#confettiCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
