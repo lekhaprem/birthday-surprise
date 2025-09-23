@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise 🎉</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <h1>🎉 Happy Birthday [Name]! 🎂</h1>
-        <p>Click the button for your surprise!</p>
-        <button id="revealBtn">🎁 Reveal Surprise</button>
-    </section>
+  <header>
+    <h1>🎂 Happy Birthday! 🎂</h1>
+  </header>
 
-    <!-- Surprise Section -->
-    <section class="surprise" id="surprise">
-        <h2>Surprise! 🥳</h2>
-        <p>Wishing you an amazing year ahead!</p>
-        <div class="slideshow">
-            <img src="images/photo1.jpg" alt="Birthday Photo">
-            <img src="images/photo2.jpg" alt="Birthday Photo">
-        </div>
-    </section>
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h2>Welcome to Your Surprise!</h2>
+    <p>We made this little website just for you 💖</p>
+    <button onclick="showSurprise()">Reveal Surprise</button>
+  </section>
 
-    <!-- Confetti Canvas -->
-    <canvas id="confettiCanvas"></canvas>
+  <!-- Surprise Section -->
+  <section class="surprise" id="surprise">
+    <h2>Surprise! 🥳</h2>
+    <p>Wishing you an amazing year ahead!</p>
 
-    <script src="script.js"></script>
+    <!-- Slideshow with your images -->
+    <div class="slideshow">
+      <img src="images/lekha.JPG" alt="Lekha Birthday Photo">
+      <img src="images/group.JPG" alt="Group Birthday Photo">
+    </div>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
