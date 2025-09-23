@@ -15,7 +15,7 @@
   <section class="welcome">
     <h2>Welcome to Your Surprise!</h2>
     <p>We made this little website just for you 💖</p>
-    <button onclick="showSurprise()">Reveal Surprise</button>
+    <button id="revealBtn">Reveal Surprise</button>
   </section>
 
   <!-- Surprise Section -->
@@ -25,10 +25,13 @@
 
     <!-- Slideshow with your images -->
     <div class="slideshow">
-      <img src="images/lekha.JPG" alt="Lekha Birthday Photo">
+      <img src="images/lekha.JPG" alt="Lekha Birthday Photo" class="active">
       <img src="images/group.JPG" alt="Group Birthday Photo">
     </div>
   </section>
+
+  <!-- Canvas for confetti -->
+  <canvas id="confettiCanvas"></canvas>
 
   <script src="script.js"></script>
 </body>
